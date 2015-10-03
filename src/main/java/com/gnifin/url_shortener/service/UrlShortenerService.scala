@@ -21,13 +21,13 @@ class UrlShortenerService(database: Database, baseUrl: String) extends Service[h
 
   override def apply(request: httpx.Request): Future[httpx.Response] = {
     (request.method, request.path) match {
-      case (Method.Put, "/")                     => shortUrlResponse(request)
+      case (Method.Put, "/")                     => createShortUrlResponse(request)
       case (Method.Get, RedirectUrlPatten(hash)) => redirectResponse(request, hash)
       case _                                     => notFoundResponse(request)
     }
   }
 
-  def shortUrlResponse(request: httpx.Request): Future[httpx.Response] = {
+  def createShortUrlResponse(request: httpx.Request): Future[httpx.Response] = {
     request.params.get("url").map(url => {
       val hash: String = hashUrl(url)
       val shortUrl: String = createShortUrl(hash)
