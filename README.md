@@ -45,10 +45,17 @@ in the root directory of the project:
 sbt compile
 ```
 
-To run the tests issue the following command:
+To run the unit tests issue the following command:
 
 ```
 sbt test
+```
+
+To run the integration tests (requires an installation of Redis and the command
+redis-server to be available in the path) issue the following command:
+
+```
+sbt it:test
 ```
 
 To run the server issue the following command:

@@ -4,6 +4,10 @@ import com.twitter.util.{Throw, Return}
 import org.scalatest.concurrent.Futures
 import org.scalatest.time.{Seconds, Span}
 
+/**
+ * Trait for working with Twitter Futures in ScalaTest. Duplicated in unit and integration test code
+ * as they cannot share code (should be looked at though...).
+ */
 trait TwitterFutures extends Futures {
 
   import scala.language.implicitConversions

@@ -4,10 +4,9 @@ import java.net.InetSocketAddress
 
 import com.gnifin.url_shortener.database.{MemoryDatabase, RedisDatabase}
 import com.gnifin.url_shortener.service.UrlShortenerService
-import com.squeed.url_shortener.database.MemoryDatabase
-import com.twitter.finagle.redis.{Client, Redis}
 import com.twitter.finagle.builder.{ClientBuilder, ServerBuilder}
 import com.twitter.finagle.httpx.Http
+import com.twitter.finagle.redis.{Client, Redis}
 
 object Main {
 
