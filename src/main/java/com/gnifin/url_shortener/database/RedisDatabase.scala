@@ -4,6 +4,12 @@ import com.twitter.finagle.redis
 import com.twitter.finagle.redis.util.{CBToString, StringToChannelBuffer}
 import com.twitter.util.Future
 
+/**
+ * Implementation of the Database trait for a Redis database.
+ *
+ * @param client Redis client to use to connect to Redis.
+ * @param prefix Optional prefix to use for keys when storing data.
+ */
 class RedisDatabase(client: redis.Client, prefix: String = "surl") extends Database {
 
   override def get(key: String): Future[Option[String]] = {

@@ -3,6 +3,9 @@ package com.gnifin.url_shortener.database
 import com.gnifin.url_shortener.TwitterFutures
 import org.scalatest.{FlatSpec, Matchers, OneInstancePerTest, OptionValues}
 
+/**
+ * Unit test for the in memory database.
+ */
 class MemoryDatabaseSpec extends FlatSpec with Matchers with OneInstancePerTest with TwitterFutures with OptionValues {
 
   val database = new MemoryDatabase

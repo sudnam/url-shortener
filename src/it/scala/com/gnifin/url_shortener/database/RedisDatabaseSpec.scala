@@ -6,6 +6,11 @@ import com.twitter.finagle.redis.util.RedisCluster
 import com.twitter.finagle.redis.{Client, Redis}
 import org.scalatest._
 
+/**
+ * Integration tests for the Redis database. Assumes that Redis is installed
+ * and the redis-server command is available in the path to be able to start
+ * up Redis instances used in the testing.
+ */
 class RedisDatabaseSpec extends FlatSpec with Matchers with TwitterFutures with OptionValues with BeforeAndAfterAll {
 
   override def beforeAll(): Unit = {

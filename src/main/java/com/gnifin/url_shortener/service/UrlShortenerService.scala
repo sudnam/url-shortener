@@ -8,6 +8,12 @@ import com.twitter.util.Future
 
 import scala.util.hashing.MurmurHash3
 
+/**
+ * The Url Shortener service implemented as an Finagle HTTP service.
+ *
+ * @param database Database to use for storing mappings between hashes and urls.
+ * @param baseUrl Base url that should be returned to the caller appended with the hash.
+ */
 class UrlShortenerService(database: Database, baseUrl: String) extends Service[httpx.Request, httpx.Response] {
 
   private val base64 = Base64.getUrlEncoder.withoutPadding()

@@ -4,6 +4,9 @@ import com.twitter.util.Future
 
 import scala.collection.mutable
 
+/**
+ * Implementation of the Database trait for an in memory database using a mutable Map.
+ */
 class MemoryDatabase extends Database {
 
   private val data = mutable.Map[String, String]()

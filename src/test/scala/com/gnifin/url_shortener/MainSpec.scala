@@ -3,6 +3,10 @@ package com.gnifin.url_shortener
 import Main.Arguments
 import org.scalatest.{Matchers, EitherValues, FlatSpec}
 
+/**
+ * Unit tests for the command line argument parsing
+ * in the main object.
+ */
 class MainSpec extends FlatSpec with Matchers with EitherValues {
 
   behavior of "The Main class"

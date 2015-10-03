@@ -7,6 +7,9 @@ import com.twitter.util.{Await, Future}
 import org.scalamock.scalatest.MockFactory
 import org.scalatest._
 
+/**
+ * Unit tests for the Url Shortener service.
+ */
 class UrlShortenerServiceSpec extends FlatSpec with Matchers with OneInstancePerTest
   with OptionValues with MockFactory {
 

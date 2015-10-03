@@ -8,6 +8,9 @@ import com.twitter.finagle.builder.{ClientBuilder, ServerBuilder}
 import com.twitter.finagle.httpx.Http
 import com.twitter.finagle.redis.{Client, Redis}
 
+/**
+ * The main class for starting up the Url Shortener service.
+ */
 object Main {
 
   def main(args: Array[String]): Unit = {
